@@ -4,7 +4,6 @@
 </script>
 
 <template>
-  <main>
     <ContentDoc v-slot="{ doc }">
       <nav v-if="doc.navigation">
         <ContentNavigation v-slot="{ navigation }">
@@ -15,12 +14,10 @@
           </ul>
         </ContentNavigation>
       </nav>
-      <article>
-        {{ doc }}
+<!--      <article>-->
         <h1>{{ doc.title }}</h1>
         <p>{{ doc.description }}</p>
         <ContentRenderer :value="doc"/>
-      </article>
+<!--      </article>-->
     </ContentDoc>
-  </main>
 </template>
