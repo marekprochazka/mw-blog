@@ -13,5 +13,6 @@ export default defineNuxtConfig({
          * @default "./components/ui"
          */
         componentDir: './components/ui'
-    }
+    },
+    css: ['~/assets/styles/entry.css'],
 })
