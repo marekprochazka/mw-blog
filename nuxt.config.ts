@@ -29,4 +29,10 @@ export default defineNuxtConfig({
   twemoji: {
     expiresIn: 3.154e7, // SVG cache expiration time in seconds (1 year)
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
 });
