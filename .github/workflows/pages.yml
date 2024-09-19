@@ -16,7 +16,7 @@ jobs:
       # Pick your own package manager and build script
       - uses: oven-sh/setup-bun@v2
       - run: bun install
-      - run: bpx nuxt build --preset github_pages
+      - run: bunx nuxt build --preset github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
