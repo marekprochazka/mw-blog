@@ -1,0 +1,46 @@
+.theme--cats {
+  .root {
+    background-image: url('/assets/cats.jpg');
+    background-repeat: repeat;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-slate-400;
+    &:before {
+      content: '🐱';
+    }
+    &:after {
+      content: '🐱';
+    }
+  }
+  .navigation-icon {
+    @apply text-slate-400 text-5xl text-center w-full;
+  }
+  .v-button {
+    @apply bg-slate-400 text-white hover:bg-slate-500;
+  }
+  .v-navbar {
+    &--content {
+      @apply bg-black border-slate-400;
+    }
+    &--line {
+      @apply bg-slate-400;
+    }
+  }
+  .v-separator {
+    &--label-bg {
+      @apply bg-black;
+    }
+    &--line-bg {
+      @apply bg-slate-400;
+    }
+  }
+  .v-card {
+    @apply bg-transparent border-8 border-slate-400;
+  }
+}

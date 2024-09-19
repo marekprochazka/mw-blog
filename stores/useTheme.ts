@@ -1,4 +1,4 @@
-export type Theme = 'default' | 'pretty';
+export type Theme = 'default' | 'pretty' | 'cats';
 
 export const useTheme = defineStore('theme', () => {
   const currentTheme = ref<Theme>('default');
@@ -14,6 +14,8 @@ export const useTheme = defineStore('theme', () => {
         return 'theme--default';
       case 'pretty':
         return 'theme--pretty';
+      case 'cats':
+        return 'theme--cats';
       default:
         return 'theme--default';
     }
@@ -29,6 +31,7 @@ export const useTheme = defineStore('theme', () => {
   const list = ref<{ identifier: Theme; title: string }[]>([
     { identifier: 'default', title: 'Default' },
     { identifier: 'pretty', title: 'Pretty' },
+    { identifier: 'cats', title: 'Cats' },
   ]);
 
   return {
