@@ -1,6 +1,6 @@
 // This file is generated automatically by bin/update-gallery.py
 // Do not edit it manually
-// Last update: 2024-09-19 21:21:12.666528
+// Last update: 2024-09-19 22:13:59.352076
 export type Img = {
   src: string;
   title: string;

@@ -1,7 +1,9 @@
+import { DEFAULT_THEME } from '~/config/constants';
+
 export type Theme = 'default' | 'pretty' | 'cats';
 
 export const useTheme = defineStore('theme', () => {
-  const currentTheme = ref<Theme>('default');
+  const currentTheme = ref<Theme>(DEFAULT_THEME);
   const setTheme = (theme: Theme) => {
     currentTheme.value = theme;
     if (localStorage) {
@@ -24,7 +26,7 @@ export const useTheme = defineStore('theme', () => {
   const fromLocalStorage = () => {
     if (localStorage) {
       currentTheme.value =
-        (localStorage.getItem('theme') as Theme) || 'default';
+        (localStorage.getItem('theme') as Theme) || DEFAULT_THEME;
     }
   };
 
