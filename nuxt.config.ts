@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  runtimeConfig: {},
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   modules: [
@@ -11,6 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@pinia/nuxt',
     'nuxt-easy-lightbox',
+    '@nuxt/image',
   ],
   shadcn: {
     /**
