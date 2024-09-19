@@ -15,7 +15,7 @@ const {setTheme} = themeStore
         <Twemoji emoji="😢"/>
       </p>
     </NuxtLink>
-    
+
     <h1>Theme selection</h1>
     <Button @click="setTheme('default')">Default</Button>
     <Button @click="setTheme('pretty')">Pretty</Button>
