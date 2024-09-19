@@ -1,0 +1,37 @@
+.theme--pretty {
+  .root {
+    @apply bg-gradient-to-tr from-fuchsia-950 to-black
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply text-pink-400
+  }
+
+  .navigation-icon {
+    @apply text-pink-400 text-5xl text-center w-full;
+  }
+
+  .v-button {
+    @apply bg-pink-400 text-white hover:bg-pink-500
+  }
+
+  .v-navbar {
+    &--content {
+      @apply bg-pink-950 border-pink-400
+    }
+  }
+
+  .v-separator {
+    &--label-bg {
+      @apply bg-pink-950
+    }
+
+    &--line-bg {
+      @apply bg-pink-400
+    }
+  }
+
+  .v-card {
+    @apply bg-transparent border-8 border-pink-400
+  }
+}

@@ -2,7 +2,15 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: {enabled: true},
-    modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/color-mode', 'nuxt-twemoji', '@nuxt/eslint'],
+    modules: [
+        '@nuxt/content',
+        '@nuxtjs/tailwindcss',
+        'shadcn-nuxt',
+        '@nuxtjs/color-mode',
+        'nuxt-twemoji',
+        '@nuxt/eslint',
+        '@pinia/nuxt'
+    ],
     shadcn: {
         /**
          * Prefix for all the imported component
@@ -14,7 +22,7 @@ export default defineNuxtConfig({
          */
         componentDir: './components/ui'
     },
-    css: ['~/assets/styles/entry.css'],
+    css: ['~/assets/styles/entry.scss'],
     twemoji: {
         expiresIn: 3.154e+7 // SVG cache expiration time in seconds (1 year)
     }

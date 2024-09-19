@@ -1,0 +1,30 @@
+.theme--default {
+  .root {
+    @apply bg-gradient-to-tr from-indigo-950 to-black
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    @apply text-slate-400
+  }
+  .navigation-icon {
+    @apply text-slate-400 text-5xl text-center w-full;
+  }
+  .v-button {
+    @apply bg-slate-400 text-white hover:bg-slate-500
+  }
+  .v-navbar {
+    &--content {
+      @apply bg-black border-slate-400
+    }
+  }
+  .v-separator {
+    &--label-bg {
+    @apply bg-black
+    }
+    &--line-bg {
+    @apply bg-slate-400
+    }
+  }
+  .v-card {
+    @apply bg-transparent border-8 border-slate-400
+  }
+}

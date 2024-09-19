@@ -1,19 +1,4 @@
 <script setup lang="ts">
-// import type {ParsedContent, QueryBuilderParams} from "@nuxt/content";
-// import {Button} from "~/components/ui/button";
-//
-// const q: QueryBuilderParams = {path: '/blog' };
-//
-// const articles = ref<any>(null);
-//
-// async function fetchArticles() {
-//   articles.value = await queryContent('/blog').where({ tags: {$not: {$contains:'no-nav'}} }).find()
-//   console.log(articles.value)
-// }
-//
-// onMounted(() => {
-//   fetchArticles()
-// })
 
 import {Card, CardContent, CardHeader} from '~/components/ui/card';
 
@@ -23,7 +8,7 @@ import {Card, CardContent, CardHeader} from '~/components/ui/card';
   <div class="grid grid-cols-6 gap-4 p-2">
     <div class="col-span-1">
       <NuxtLink to="/blog">
-        <Card class="bg-transparent border-8 border-blue-200">
+        <Card>
           <CardHeader>
             <h1>Blog</h1>
           </CardHeader>
@@ -33,9 +18,21 @@ import {Card, CardContent, CardHeader} from '~/components/ui/card';
         </Card>
       </NuxtLink>
     </div>
+     <div class="col-span-1">
+      <NuxtLink to="/theme">
+        <Card>
+          <CardHeader>
+            <h1>Themes</h1>
+          </CardHeader>
+          <CardContent>
+            <img alt="bella baxter" class="h-40 mx-auto w-full" src="/assets/gifs/bella.webp">
+          </CardContent>
+        </Card>
+      </NuxtLink>
+    </div>
     <div class="col-span-1">
       <NuxtLink to="/">
-        <Card class="bg-transparent border-8 border-blue-200">
+        <Card>
           <CardHeader>
             <h1>TBD</h1>
           </CardHeader>

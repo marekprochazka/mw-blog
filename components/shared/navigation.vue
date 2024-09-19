@@ -5,15 +5,15 @@ import {Separator} from '~/components/ui/separator';
 </script>
 
 <template>
-  <Drawer>
+  <Drawer class="v-navbar">
     <DrawerTrigger class="w-full text-center v-navbar--button">
-      <Icon class="text-slate-400 text-5xl text-center w-full" icon="radix-icons:component-2">Open</Icon>
+      <Icon class="navigation-icon" icon="radix-icons:component-2">Open</Icon>
     </DrawerTrigger>
-    <DrawerContent class="bg-black">
+    <DrawerContent class="v-navbar--content">
       <DrawerHeader>
         <DrawerTitle class="text-center"><h2>Where do you want to go?</h2></DrawerTitle>
       </DrawerHeader>
-      <div class="grid grid-rows-1 grid-cols-4">
+      <div class="grid grid-rows-1 grid-cols-5">
         <div>
           <DrawerClose class="w-full">
             <NuxtLink to="/"><p class="text-center">Home</p></NuxtLink>
@@ -34,12 +34,17 @@ import {Separator} from '~/components/ui/separator';
             <NuxtLink to="/contact"><p class="text-center">Contact</p></NuxtLink>
           </DrawerClose>
         </div>
+        <div>
+          <DrawerClose class="w-full">
+            <NuxtLink to="/theme"><p class="text-center">Themes</p></NuxtLink>
+          </DrawerClose>
+        </div>
       </div>
       <DrawerFooter>
-        <Separator :label="true">
+        <Separator bg-class="v-separator--label-bg" :label="true" line-class="v-separator--line-bg"><p>
           It's great to have you here
           <Twemoji class="ml-1.5" emoji="🫶"/>
-        </Separator>
+        </p></Separator>
       </DrawerFooter>
     </DrawerContent>
   </Drawer>

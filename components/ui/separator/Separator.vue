@@ -4,7 +4,7 @@ import {Separator, type SeparatorProps} from 'radix-vue'
 import {cn} from '@/lib/utils'
 
 const props = defineProps<
-    SeparatorProps & { class?: HTMLAttributes['class'], label?: boolean, bgClass?: string }
+    SeparatorProps & { class?: HTMLAttributes['class'], label?: boolean, bgClass?: string, lineClass?: string }
 >()
 
 const delegatedProps = computed(() => {
@@ -19,9 +19,10 @@ const delegatedProps = computed(() => {
       v-bind="delegatedProps"
       :class="
       cn(
-        'shrink-0 bg-slate-200 relative dark:bg-slate-800',
+        'shrink-0 relative',
         props.orientation === 'vertical' ? 'w-px h-full' : 'h-px w-full',
         props.class,
+        props.lineClass ?? 'bg-slate-400'
       )
     "
   >
