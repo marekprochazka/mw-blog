@@ -15,7 +15,7 @@
 //   fetchArticles()
 // })
 
-import {Card, CardContent, CardFooter, CardHeader} from "~/components/ui/card";
+import {Card, CardContent, CardFooter, CardHeader} from '~/components/ui/card';
 import {CheckIcon} from '@radix-icons/vue'
 
 </script>
@@ -43,7 +43,7 @@ import {CheckIcon} from '@radix-icons/vue'
           <p>Content</p>
         </CardContent>
         <CardFooter>
-          <Button @click="navigateTo('/blog')" class="w-full">
+          <Button class="w-full" @click="navigateTo('/blog')">
             <CheckIcon class="mr-2 h-4 w-4"/>
             Go to blog
           </Button>
@@ -59,7 +59,7 @@ import {CheckIcon} from '@radix-icons/vue'
           <p>Content</p>
         </CardContent>
         <CardFooter>
-          <Button @click="navigateTo('/')" class="w-full">
+          <Button class="w-full" @click="navigateTo('/')">
             <CheckIcon class="mr-2 h-4 w-4"/>
             TBD
           </Button>

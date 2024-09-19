@@ -1,13 +1,13 @@
 <script setup lang="ts">
 
-import {Icon} from "@iconify/vue";
-import {Separator} from "~/components/ui/separator";
+import {Icon} from '@iconify/vue';
+import {Separator} from '~/components/ui/separator';
 </script>
 
 <template>
   <Drawer>
     <DrawerTrigger>
-      <Icon icon="radix-icons:hamburger-menu" class="text-slate-400 text-3xl">Open</Icon>
+      <Icon class="text-slate-400 text-3xl" icon="radix-icons:hamburger-menu">Open</Icon>
     </DrawerTrigger>
     <DrawerContent class="bg-black">
       <DrawerHeader>
