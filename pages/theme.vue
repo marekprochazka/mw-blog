@@ -3,23 +3,18 @@
 import {useTheme} from '~/stores/useTheme';
 
 const themeStore = useTheme()
+const {currentTheme, list} = storeToRefs(themeStore)
 const {setTheme} = themeStore
 </script>
 
 <template>
   <div>
-    <NuxtLink to="/">
-      <p>
-        <Twemoji emoji="👈"/>
-        I want to go home
-        <Twemoji emoji="😢"/>
-      </p>
-    </NuxtLink>
+    <shared-go-home/>
 
     <h1>Theme selection</h1>
-    <Button @click="setTheme('default')">Default</Button>
-    <Button @click="setTheme('pretty')">Pretty</Button>
-
+    <Button v-for="theme in list" :key="theme.identifier" :disabled="theme.identifier === currentTheme" @click="setTheme(theme.identifier)">
+      {{ theme.title }}
+    </Button>
   </div>
 
 </template>

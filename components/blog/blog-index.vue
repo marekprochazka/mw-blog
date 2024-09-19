@@ -16,7 +16,7 @@ fetchArticles()
 </script>
 
 <template>
-  <NuxtLink to="/"><p><Twemoji emoji="👈"/> I want to go home <Twemoji emoji="😢"/></p></NuxtLink>
+  <shared-go-home />
   <div class="grid grid-cols-4 gap-4 p-2">
     <Card v-for="article in articles" :key="article._path" class="col-span-1 bg-transparent border-8 border-blue-200">
       <CardHeader>

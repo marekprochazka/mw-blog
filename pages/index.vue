@@ -2,54 +2,45 @@
 
 import {Card, CardContent, CardHeader} from '~/components/ui/card';
 
+const bigMenu = [
+  {
+    title: 'Blog',
+    image: '/assets/gifs/mind-blown.webp',
+    imgAlt: 'mind-blown',
+    link: '/blog'
+  },
+  {
+    title: 'Themes',
+    image: '/assets/gifs/bella.webp',
+    imgAlt: 'bella baxter',
+    link: '/theme'
+  },
+  {
+    title: 'Gallery',
+    image: '/assets/gifs/jso.webp',
+    imgAlt: 'just stop oil',
+    link: '/gallery'
+  },
+  {
+    title: 'TBD',
+    image: '/assets/gifs/hello-there.webp',
+    imgAlt: 'hello there obi wan kenobi',
+    link: '/'
+  }
+]
+
 </script>
 
 <template>
   <div class="grid grid-cols-6 gap-4 p-2">
-    <div class="col-span-1">
-      <NuxtLink to="/blog">
+    <div v-for="item in bigMenu" :key="item.title" class="col-span-1">
+      <NuxtLink :to="item.link">
         <Card>
           <CardHeader>
-            <h1>Blog</h1>
+            <h1>{{ item.title }}</h1>
           </CardHeader>
           <CardContent>
-            <img alt="mind-blown" class="h-40 mx-auto" src="/assets/gifs/mind-blown.webp">
-          </CardContent>
-        </Card>
-      </NuxtLink>
-    </div>
-     <div class="col-span-1">
-      <NuxtLink to="/theme">
-        <Card>
-          <CardHeader>
-            <h1>Themes</h1>
-          </CardHeader>
-          <CardContent>
-            <img alt="bella baxter" class="h-40 mx-auto w-full" src="/assets/gifs/bella.webp">
-          </CardContent>
-        </Card>
-      </NuxtLink>
-    </div>
-         <div class="col-span-1">
-      <NuxtLink to="/gallery">
-        <Card>
-          <CardHeader>
-            <h1>Gallery</h1>
-          </CardHeader>
-          <CardContent>
-            <img alt="just stop oil" class="h-40 mx-auto w-full" src="/assets/gifs/jso.webp">
-          </CardContent>
-        </Card>
-      </NuxtLink>
-    </div>
-    <div class="col-span-1">
-      <NuxtLink to="/">
-        <Card>
-          <CardHeader>
-            <h1>TBD</h1>
-          </CardHeader>
-          <CardContent>
-            <img alt="obi-wan" class="h-40 mx-auto w-full" src="/assets/gifs/hello-there.webp">
+            <img :alt="item.imgAlt" class="h-40 mx-auto w-full" :src="item.image">
           </CardContent>
         </Card>
       </NuxtLink>

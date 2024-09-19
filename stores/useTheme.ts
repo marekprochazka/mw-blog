@@ -25,11 +25,17 @@ export const useTheme = defineStore('theme', () => {
         }
     }
 
+    const list = ref<{identifier: Theme, title: string}[]>([
+        {identifier: 'default', title: 'Default'},
+        {identifier: 'pretty', title: 'Pretty'}
+    ])
+
 
     return {
         currentTheme,
         setTheme,
         cssClass,
-        fromLocalStorage
+        fromLocalStorage,
+        list
     }
 })
