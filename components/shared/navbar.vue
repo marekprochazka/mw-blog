@@ -6,8 +6,8 @@ import {Separator} from '~/components/ui/separator';
 
 <template>
   <Drawer>
-    <DrawerTrigger>
-      <Icon class="text-slate-400 text-3xl" icon="radix-icons:hamburger-menu">Open</Icon>
+    <DrawerTrigger class="w-full text-center v-navbar--button">
+      <Icon class="text-slate-400 text-5xl text-center w-full" icon="radix-icons:component-2">Open</Icon>
     </DrawerTrigger>
     <DrawerContent class="bg-black">
       <DrawerHeader>

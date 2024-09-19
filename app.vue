@@ -5,7 +5,8 @@
 
 <template>
   <main class="root">
+    <NuxtPage/>
     <shared-navbar />
-    <NuxtPage />
   </main>
+
 </template>
