@@ -15,14 +15,13 @@ import {Separator} from '~/components/ui/separator';
       </DrawerHeader>
       <div class="grid grid-rows-1 grid-cols-4">
         <div>
-
           <DrawerClose class="w-full">
-            <NuxtLink to="/blog"><p class="text-center">Blog</p></NuxtLink>
+            <NuxtLink to="/"><p class="text-center">Home</p></NuxtLink>
           </DrawerClose>
         </div>
         <div>
           <DrawerClose class="w-full">
-            <NuxtLink to="/"><p class="text-center">Home</p></NuxtLink>
+            <NuxtLink to="/blog"><p class="text-center">Blog</p></NuxtLink>
           </DrawerClose>
         </div>
         <div>
@@ -38,7 +37,8 @@ import {Separator} from '~/components/ui/separator';
       </div>
       <DrawerFooter>
         <Separator :label="true">
-          It's great to have you here <Twemoji class="ml-1.5" emoji="👾" />
+          It's great to have you here
+          <Twemoji class="ml-1.5" emoji="🫶"/>
         </Separator>
       </DrawerFooter>
     </DrawerContent>

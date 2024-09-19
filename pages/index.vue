@@ -15,56 +15,35 @@
 //   fetchArticles()
 // })
 
-import {Card, CardContent, CardFooter, CardHeader} from '~/components/ui/card';
-import {CheckIcon} from '@radix-icons/vue'
+import {Card, CardContent, CardHeader} from '~/components/ui/card';
 
 </script>
 
 <template>
-  <!--  <shared-navbar />-->
-  <!--  <div>-->
-  <!--    INDEX-->
-  <!--  </div>-->
-  <!--  <Button class="bg-amber-700">TEST</Button>-->
-
-  <!--   <div v-if="articles">-->
-  <!--    <h1>The blog 2</h1>-->
-  <!--    <div v-for="article in articles">-->
-  <!--      <NuxtLink :to="article._path" :key="article._path">{{article.title}} <br></NuxtLink>-->
-  <!--    </div>-->
-  <!--  </div>-->
-  <div class="grid grid-cols-2 gap-4 p-2">
+  <div class="grid grid-cols-6 gap-4 p-2">
     <div class="col-span-1">
-      <Card class="bg-transparent border-8 border-blue-200">
-        <CardHeader>
-          <h1>Blog</h1>
-        </CardHeader>
-        <CardContent>
-          <p>Content</p>
-        </CardContent>
-        <CardFooter>
-          <Button class="w-full" @click="navigateTo('/blog')">
-            <CheckIcon class="mr-2 h-4 w-4"/>
-            Go to blog
-          </Button>
-        </CardFooter>
-      </Card>
+      <NuxtLink to="/blog">
+        <Card class="bg-transparent border-8 border-blue-200">
+          <CardHeader>
+            <h1>Blog</h1>
+          </CardHeader>
+          <CardContent>
+            <img alt="mind-blown" class="h-40 mx-auto" src="/assets/gifs/mind-blown.webp">
+          </CardContent>
+        </Card>
+      </NuxtLink>
     </div>
     <div class="col-span-1">
-      <Card class="bg-transparent border-8 border-blue-200">
-        <CardHeader>
-          <h1>TBD</h1>
-        </CardHeader>
-        <CardContent>
-          <p>Content</p>
-        </CardContent>
-        <CardFooter>
-          <Button class="w-full" @click="navigateTo('/')">
-            <CheckIcon class="mr-2 h-4 w-4"/>
-            TBD
-          </Button>
-        </CardFooter>
-      </Card>
+      <NuxtLink to="/">
+        <Card class="bg-transparent border-8 border-blue-200">
+          <CardHeader>
+            <h1>TBD</h1>
+          </CardHeader>
+          <CardContent>
+            <img alt="obi-wan" class="h-40 mx-auto w-full" src="/assets/gifs/hello-there.webp">
+          </CardContent>
+        </Card>
+      </NuxtLink>
     </div>
   </div>
 </template>
