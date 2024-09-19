@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'nuxt-twemoji',
     '@nuxt/eslint',
     '@pinia/nuxt',
+    'nuxt-easy-lightbox',
   ],
   shadcn: {
     /**

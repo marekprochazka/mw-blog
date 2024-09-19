@@ -22,6 +22,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "nuxt": "^3.13.0",
+    "nuxt-easy-lightbox": "^1.0.2",
     "nuxt-twemoji": "^3.6.2",
     "radix-vue": "^1.9.5",
     "shadcn-nuxt": "^0.10.4",

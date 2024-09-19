@@ -1,4 +1,14 @@
+# Webp conver
+```bash
+
+for i in *.JPEG; do cwebp -q 80 "$i" -o "${i%.JPEG}.webp"; rm "$i"; done
+```
+
+
+
 # Nuxt 3 Minimal Starter
+
+
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
