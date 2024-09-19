@@ -25,6 +25,11 @@ export default defineNuxtConfig({
      */
     componentDir: './components/ui',
   },
+  content: {
+    experimental: {
+      clientDB: true,
+    },
+  },
   css: ['~/assets/styles/entry.scss'],
   twemoji: {
     expiresIn: 3.154e7, // SVG cache expiration time in seconds (1 year)
