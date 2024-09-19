@@ -14,10 +14,10 @@ repos:
           - vue-eslint-parser
           - eslint-plugin-prettier
           - eslint-config-prettier
-          - "@typescript-eslint/parser"
-          - "@typescript-eslint/eslint-plugin"
-          - "@nuxtjs/eslint-config-typescript"
-          - "@nuxt/eslint-config"
+          - '@typescript-eslint/parser'
+          - '@typescript-eslint/eslint-plugin'
+          - '@nuxtjs/eslint-config-typescript'
+          - '@nuxt/eslint-config'
           - eslint-import-resolver-typescript
           - eslint-plugin-unicorn
           - eslint-plugin-n
