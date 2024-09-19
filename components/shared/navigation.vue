@@ -2,13 +2,22 @@
 import { Icon } from '@iconify/vue';
 import { Separator } from '~/components/ui/separator';
 
+// const pages = [
+//   { title: 'Home', path: '/' },
+//   { title: 'Blog', path: '/blog' },
+//   { title: 'Gallery', path: '/gallery' },
+//   { title: 'About', path: '/about' },
+//   { title: 'Contact', path: '/contact' },
+//   { title: 'Themes', path: '/theme' },
+// ];
+
 const pages = [
-  { title: 'Home', path: '/' },
-  { title: 'Blog', path: '/blog' },
-  { title: 'Gallery', path: '/gallery' },
-  { title: 'About', path: '/about' },
-  { title: 'Contact', path: '/contact' },
-  { title: 'Themes', path: '/theme' },
+  { title: 'Home', handler: () => navigateTo('/') },
+  { title: 'Blog', handler: () => navigateTo('/blog') },
+  { title: 'Gallery', handler: () => navigateTo('/gallery') },
+  { title: 'About', handler: () => navigateTo('/about') },
+  { title: 'Contact', handler: () => navigateTo('/contact') },
+  { title: 'Themes', handler: () => navigateTo('/theme') },
 ];
 
 const gridCols = pages.length;
@@ -28,8 +37,8 @@ const gridCols = pages.length;
       <div :class="['grid grid-rows-1', `grid-cols-${gridCols}`]">
         <div v-for="page in pages" :key="page.title">
           <DrawerClose class="w-full">
-            <NuxtLink :to="page.path"
-              ><p class="text-center">{{ page.title }}</p></NuxtLink
+            <a @click="page.handler"
+              ><p class="text-center">{{ page.title }}</p></a
             >
           </DrawerClose>
         </div>
