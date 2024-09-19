@@ -1,37 +1,41 @@
 p {
-    /*@apply font-mono text-slate-400 p-1*/
-    @apply font-mono p-1
+  /*@apply font-mono text-slate-400 p-1*/
+  @apply font-mono p-1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    /*@apply font-bold font-sans text-slate-400*/
-    @apply font-bold font-sans
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /*@apply font-bold font-sans text-slate-400*/
+  @apply font-bold font-sans;
 }
 
 h1 {
-    @apply text-4xl p-1
+  @apply text-4xl p-1;
 }
 
 h2 {
-    @apply text-3xl p-1
+  @apply text-3xl p-1;
 }
 
 h3 {
-    @apply text-2xl p-1
+  @apply text-2xl p-1;
 }
 
 h4 {
-    @apply text-xl p-1
+  @apply text-xl p-1;
 }
 
 h5 {
-    @apply text-lg p-1
+  @apply text-lg p-1;
 }
 
 h6 {
-    @apply text-base p-1
+  @apply text-base p-1;
 }
 
 .root {
-
 }

@@ -1,34 +1,32 @@
 <script setup lang="ts">
-
-import {Card, CardContent, CardHeader} from '~/components/ui/card';
+import { Card, CardContent, CardHeader } from '~/components/ui/card';
 
 const bigMenu = [
   {
     title: 'Blog',
     image: '/assets/gifs/mind-blown.webp',
     imgAlt: 'mind-blown',
-    link: '/blog'
+    link: '/blog',
   },
   {
     title: 'Themes',
     image: '/assets/gifs/bella.webp',
     imgAlt: 'bella baxter',
-    link: '/theme'
+    link: '/theme',
   },
   {
     title: 'Gallery',
     image: '/assets/gifs/jso.webp',
     imgAlt: 'just stop oil',
-    link: '/gallery'
+    link: '/gallery',
   },
   {
     title: 'TBD',
     image: '/assets/gifs/hello-there.webp',
     imgAlt: 'hello there obi wan kenobi',
-    link: '/'
-  }
-]
-
+    link: '/',
+  },
+];
 </script>
 
 <template>
@@ -40,12 +38,14 @@ const bigMenu = [
             <h1>{{ item.title }}</h1>
           </CardHeader>
           <CardContent>
-            <img :alt="item.imgAlt" class="h-40 mx-auto w-full" :src="item.image">
+            <img
+              :alt="item.imgAlt"
+              class="h-40 mx-auto w-full"
+              :src="item.image"
+            >
           </CardContent>
         </Card>
       </NuxtLink>
     </div>
   </div>
 </template>
-
-

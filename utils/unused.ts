@@ -1,3 +1,1 @@
-
-
-export const UNUSED = (value: unknown) => value
+export const UNUSED = (value: unknown) => value;

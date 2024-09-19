@@ -1,7 +1,6 @@
 <script setup lang="ts">
-
-import {Icon} from '@iconify/vue';
-import {Separator} from '~/components/ui/separator';
+import { Icon } from '@iconify/vue';
+import { Separator } from '~/components/ui/separator';
 </script>
 
 <template>
@@ -11,7 +10,9 @@ import {Separator} from '~/components/ui/separator';
     </DrawerTrigger>
     <DrawerContent class="v-navbar--content">
       <DrawerHeader>
-        <DrawerTitle class="text-center"><h2>Where do you want to go?</h2></DrawerTitle>
+        <DrawerTitle class="text-center"
+          ><h2>Where do you want to go?</h2></DrawerTitle
+        >
       </DrawerHeader>
       <div class="grid grid-rows-1 grid-cols-5">
         <div>
@@ -31,7 +32,9 @@ import {Separator} from '~/components/ui/separator';
         </div>
         <div>
           <DrawerClose class="w-full">
-            <NuxtLink to="/contact"><p class="text-center">Contact</p></NuxtLink>
+            <NuxtLink to="/contact"
+              ><p class="text-center">Contact</p></NuxtLink
+            >
           </DrawerClose>
         </div>
         <div>
@@ -41,14 +44,15 @@ import {Separator} from '~/components/ui/separator';
         </div>
       </div>
       <DrawerFooter>
-        <Separator bg-class="v-separator--label-bg" :label="true" line-class="v-separator--line-bg"><p>
-          It's great to have you here
-          <Twemoji class="ml-1.5" emoji="🫶"/>
-        </p></Separator>
+        <Separator
+          bg-class="v-separator--label-bg"
+          :label="true"
+          line-class="v-separator--line-bg"
+          ><p>
+            It's great to have you here
+            <Twemoji class="ml-1.5" emoji="🫶" /></p
+        ></Separator>
       </DrawerFooter>
     </DrawerContent>
   </Drawer>
-
 </template>
-
-

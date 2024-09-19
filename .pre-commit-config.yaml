@@ -3,8 +3,8 @@ repos:
     rev: v9.0.0-beta.1
     hooks:
       - id: eslint
-        files: \.([jt]sx?|vue)$  # *.js, *.jsx, *.ts, *.tsx and *.vue
-        types: [ file ]
+        files: \.([jt]sx?|vue)$ # *.js, *.jsx, *.ts, *.tsx and *.vue
+        types: [file]
         exclude: api-spec.d.ts
         additional_dependencies:
           - eslint@^8.27.0
@@ -22,6 +22,4 @@ repos:
           - eslint-plugin-unicorn
           - eslint-plugin-n
           - eslint-plugin-promise
-        args: [ --fix --ignore-pattern services/playground/ ]
-
-
+        args: [--fix --ignore-pattern services/playground/]

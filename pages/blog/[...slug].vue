@@ -1,10 +1,7 @@
-<script setup lang="ts">
-
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
-    <ContentDoc v-slot="{ doc }">
-      <blog-wrapper :doc="doc"/>
-    </ContentDoc>
+  <ContentDoc v-slot="{ doc }">
+    <blog-wrapper :doc="doc" />
+  </ContentDoc>
 </template>

@@ -1,11 +1,7 @@
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
-<h1>TBD gallery</h1>
+    <h1>TBD gallery</h1>
   </div>
 </template>
-
-
