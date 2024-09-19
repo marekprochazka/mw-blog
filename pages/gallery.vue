@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { ScrollArea } from '~/components/ui/scroll-area';
 
+useHead({
+  title: 'Gallery',
+});
+
 const visibleRef = ref(false);
 const indexRef = ref(0);
 

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { useTheme } from '~/stores/useTheme';
 
+useHead({
+  title: 'Theme selection',
+});
+
 const themeStore = useTheme();
 const { currentTheme, list } = storeToRefs(themeStore);
 const { setTheme } = themeStore;

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { Card, CardContent, CardHeader } from '~/components/ui/card';
 
+useHead({
+  title: 'Home',
+});
+
 const bigMenu = [
   {
     title: 'Blog',
