@@ -25,6 +25,9 @@
     &--content {
       @apply bg-pink-950 border-pink-400;
     }
+    &--line {
+      @apply bg-pink-400;
+    }
   }
 
   .v-separator {

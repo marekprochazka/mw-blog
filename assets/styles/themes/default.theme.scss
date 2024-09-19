@@ -21,6 +21,9 @@
     &--content {
       @apply bg-black border-slate-400;
     }
+    &--line {
+      @apply bg-slate-400;
+    }
   }
   .v-separator {
     &--label-bg {
