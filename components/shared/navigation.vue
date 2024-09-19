@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 import { Separator } from '~/components/ui/separator';
+
+const pages = [
+  { title: 'Home', path: '/' },
+  { title: 'Blog', path: '/blog' },
+  { title: 'Gallery', path: '/gallery' },
+  { title: 'About', path: '/about' },
+  { title: 'Contact', path: '/contact' },
+  { title: 'Themes', path: '/theme' },
+];
+
+const gridCols = pages.length;
 </script>
 
 <template>
@@ -14,32 +25,12 @@ import { Separator } from '~/components/ui/separator';
           ><h2>Where do you want to go?</h2></DrawerTitle
         >
       </DrawerHeader>
-      <div class="grid grid-rows-1 grid-cols-5">
-        <div>
+      <div :class="['grid grid-rows-1', `grid-cols-${gridCols}`]">
+        <div v-for="page in pages" :key="page.title">
           <DrawerClose class="w-full">
-            <NuxtLink to="/"><p class="text-center">Home</p></NuxtLink>
-          </DrawerClose>
-        </div>
-        <div>
-          <DrawerClose class="w-full">
-            <NuxtLink to="/blog"><p class="text-center">Blog</p></NuxtLink>
-          </DrawerClose>
-        </div>
-        <div>
-          <DrawerClose class="w-full">
-            <NuxtLink to="/about"><p class="text-center">About</p></NuxtLink>
-          </DrawerClose>
-        </div>
-        <div>
-          <DrawerClose class="w-full">
-            <NuxtLink to="/contact"
-              ><p class="text-center">Contact</p></NuxtLink
+            <NuxtLink :to="page.path"
+              ><p class="text-center">{{ page.title }}</p></NuxtLink
             >
-          </DrawerClose>
-        </div>
-        <div>
-          <DrawerClose class="w-full">
-            <NuxtLink to="/theme"><p class="text-center">Themes</p></NuxtLink>
           </DrawerClose>
         </div>
       </div>
