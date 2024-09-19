@@ -40,4 +40,5 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
+  ssr: false,
 });
