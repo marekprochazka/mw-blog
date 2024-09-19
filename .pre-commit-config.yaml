@@ -8,7 +8,6 @@ repos:
         exclude: api-spec.d.ts
         additional_dependencies:
           - eslint@^8.27.0
-          - eslint-config-airbnb-base@^15.0.0
           - eslint-plugin-import@^2.26.0
           - eslint-plugin-vue@^9.7.0
           - vue-eslint-parser
