@@ -27,7 +27,11 @@
   for i in *.<extension>; do cwebp -q 80 "$i" -o "${i%.<extension>}.webp"; rm "$i"; done
 ```
 
-
+## bump version
+- creates a version tag, updates version in package.json and updates CHANGELOG.md
+```bash
+  ./bin/bump-version.sh <version>
+```
 
 
 
