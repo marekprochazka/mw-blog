@@ -19,7 +19,7 @@ const onHide = () => (visibleRef.value = false);
 
 const randomSpan = () => [
   `col-span-${Math.floor(Math.random() * 6) + 1}`,
-  `row-span-${Math.floor(Math.random() * 6) + 1}`,
+  `row-span-${Math.floor(Math.random() * 2) + 1}`,
 ];
 </script>
 
@@ -27,7 +27,7 @@ const randomSpan = () => [
   <div class="h-full">
     <shared-go-home />
     <ScrollArea class="h-5/6 w-full">
-      <div class="grid grid-cols-8 gap-2">
+      <div class="grid grid-cols-12 gap-2">
         <div
           v-for="(src, index) in images"
           :key="index"
@@ -37,6 +37,8 @@ const randomSpan = () => [
             'rounded-lg',
             'flex',
             ...randomSpan(),
+            // 'row-span-2',
+            // 'col-span-3',
           ]"
           @click="() => showImg(index)"
         >
